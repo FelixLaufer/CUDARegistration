@@ -1,4 +1,4 @@
-#include "projects/aspect_maps_memory/gpu_algorithms/basicComplexMath.cu"
+#include "gpu_algorithms/basicComplexMath.cu"
 
 namespace gpu_algorithms
 {
