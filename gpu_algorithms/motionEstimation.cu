@@ -114,7 +114,7 @@ static __global__ void Real2ComplexMatrixBlockExtraction(const Real *idata, Comp
 
 	int o_block_x = idx_x;
 	int o_block_y = idx_y;
-
+ 
 	const unsigned int i_block_row = block_id / blocks_count_x;
 	const unsigned int i_block_col = block_id - i_block_row * blocks_count_x;
 
