@@ -27,7 +27,7 @@ namespace motion_estimation
 //----------------------------------------------------------------------
 
 // Argument of maximum reduction
-// Requires: 	blockDim.x = block stream size
+// Requires: blockDim.x = block stream size
 template<bool param_result_maximums>
 static __global__ void ArgumentMaximumReduction(const Complex *idata, int *result_indices, Real *result_maximums, const unsigned int maximum_iterations)
 {
@@ -192,7 +192,7 @@ static __global__ void MotionIndices2Matrix(const int *idata, Vec2f *odata, cons
 // Algorithms
 //----------------------------------------------------------------------
 
-// Requires:	block_size <= search_blocksize <= 32 (CUDA max. threads per block = 32 x 32)
+// Requires: block_size <= search_blocksize <= 32 (CUDA max. threads per block = 32 x 32)
 __host__ void BlockMotionEstimation(const float* iframe_a_data, const float* iframe_b_data, Vec2f* omotion_vector_matrix, const unsigned int matrix_size, const unsigned int block_size, const unsigned int search_block_size, const bool weighting_window, const bool show_motion = false)
 {
 	// Return immediately in case of wrong size specifications
