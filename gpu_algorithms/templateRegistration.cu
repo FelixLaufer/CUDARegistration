@@ -4,7 +4,7 @@
  * \author  Felix Laufer
  *
  *
- * CUDA: Fast rotation-invariant template registration on 2d matrices
+ * CUDA: Fast rotation-invariant template registration on large 2D matrices
  *
  */
 //----------------------------------------------------------------------
