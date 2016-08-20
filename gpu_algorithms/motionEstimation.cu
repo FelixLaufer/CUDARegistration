@@ -79,7 +79,7 @@ static __global__ void ArgumentMaximumReduction(const Complex *idata, int *resul
 			}
 			__syncthreads();
 		}
-
+ 
 		if (tid == 0)
 		{
 			const int last_maximum_index = sindices[0];
