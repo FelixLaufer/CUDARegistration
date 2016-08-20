@@ -20,7 +20,7 @@ namespace cuda
 {
 namespace motion_estimation
 {
-
+ 
 
 //----------------------------------------------------------------------
 // Kernel functions
