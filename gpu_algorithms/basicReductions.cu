@@ -210,6 +210,6 @@ static __host__ void ArgMaxReduceBlockwise(const Complex *idata, Complex *odata_
 	cudaFree(out_dev);
 	cudaFree(indices_dev);
 }
-
+ 
 }
 }
