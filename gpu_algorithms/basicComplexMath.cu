@@ -24,10 +24,11 @@ typedef cufftReal Real;
 // Helper functions
 //----------------------------------------------------------------------
 
+// Cyclically shift the matrix 'shift_x' steps in x-direction and 'shift_y' steps in y-direction
 static __host__ __device__ inline unsigned int SequentialIndex2DCyclicShift(const unsigned int x, const unsigned int y, const unsigned int nx, const unsigned int ny, const int shift_x, const int shift_y)
 {
-	int xx = x;
-	int yy = y;
+    int xx = x;
+    int yy = y;
 	xx += shift_x;
 	yy += shift_y;
 	xx = (xx < 0) ? xx + (int) nx : (xx >= (int) nx) ? xx - (int) nx : xx;
@@ -36,7 +37,7 @@ static __host__ __device__ inline unsigned int SequentialIndex2DCyclicShift(cons
 	return yy * nx + xx;
 }
 
-// Cyclically shift the matrix
+// Cyclically shift the matrix 'shift' steps both in x- and y-direction
 static __host__ __device__ inline unsigned int SequentialIndex2DCyclicShift(const unsigned int x, const unsigned int y, const unsigned int matrix_size, const int shift)
 {
 	return SequentialIndex2DCyclicShift(x, y, matrix_size, matrix_size, shift, shift);
