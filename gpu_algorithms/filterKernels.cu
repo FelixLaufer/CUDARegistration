@@ -72,6 +72,6 @@ static __global__ void RaisedCosineWindow(Real *odata, const unsigned int nx, co
 		odata[i] = 0.5f * (1.0f - cosf((2.0f * M_PI * x) / (nx - 1))) * 0.5f * (1.0f - cosf((2.0f * M_PI * y) / (ny - 1)));
 	}
 }
-
+ 
 }
 }
